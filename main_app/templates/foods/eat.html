@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<hr>
+<div class="row">
+  <div class="col s6">
+    <h3>{{ eat.meal }}'s Meals</h3>
+    {% if food.eat.count %}
+      {% for eat in food..all %}
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+              A <span style="eat: {{ eat.date }}">{{ eat.date }}</span> {{ eat.meal }}
+            </span>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <h5>No Meals 😿</h5>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
